@@ -1,0 +1,30 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        <url>
+            <loc>http://127.0.0.1:1029/about/</loc>
+            
+        </url>
+    
+    
+        <url>
+            <loc>http://127.0.0.1:1029/</loc>
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1029/page/1/</loc>
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1029/posts/</loc>
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1029/posts/2019/</loc>
+        </url>
+    
+        <url>
+            <loc>http://127.0.0.1:1029/static/</loc>
+        </url>
+    
+    
+</urlset>
