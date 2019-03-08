@@ -1,29 +1,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>http://127.0.0.1:1029/about/</loc>
+            <loc>https://nmbr7.github.io/about/</loc>
             
         </url>
     
     
         <url>
-            <loc>http://127.0.0.1:1029/</loc>
+            <loc>https://nmbr7.github.io/</loc>
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1029/page/1/</loc>
+            <loc>https://nmbr7.github.io/page/1/</loc>
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1029/posts/</loc>
+            <loc>https://nmbr7.github.io/posts/</loc>
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1029/posts/2019/</loc>
+            <loc>https://nmbr7.github.io/posts/2019/</loc>
         </url>
     
         <url>
-            <loc>http://127.0.0.1:1029/static/</loc>
+            <loc>https://nmbr7.github.io/static/</loc>
         </url>
     
     
