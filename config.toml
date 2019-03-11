@@ -1,8 +1,8 @@
-wURL the site will be built for
+# The URL the site will be built for
 base_url = "https://nmbr7.github.io"
 
 title = "nmbr_7"
-description = "Security Enthusiast"
+description = "Security Enthusiast interested in System/Web security, CTFer, Student"
 generate_rss = true
 
 # Go through every links in all content and check if the links are valid
@@ -17,5 +17,4 @@ highlight_code = true
 highlight_theme = "ayu-light"
 
 [extra]
-    author = "suhailr7"
-
+    author = "Suhailr7"
