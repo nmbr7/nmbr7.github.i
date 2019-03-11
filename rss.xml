@@ -1,0 +1,176 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>nmbr_7</title>
+        <link>https://nmbr7.github.io</link>
+        <description>Security Enthusiast interested in System&#x2F;Web security, CTFer, Student</description>
+        <generator>Zola</generator>
+        <language>en</language>
+        <atom:link href="https://nmbr7.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Tue, 12 Mar 2019 00:00:00 +0000</lastBuildDate>
+        
+            <item>
+                <title>Into the fuzzer universe</title>
+                <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+                <link>https://nmbr7.github.io/2019/into-the-fuzzer-universe/</link>
+                <guid>https://nmbr7.github.io/2019/into-the-fuzzer-universe/</guid>
+                <description>&lt;figure&gt;
+    &lt;img src=&quot;.&amp;#x2F;scooter.svg&quot; &#x2F;&gt;
+    &lt;figcaption&gt;
+        A woman riding a scooter
+        &lt;br &#x2F;&gt;
+        Car vector created by &lt;a href=&quot;https:&#x2F;&#x2F;www.freepik.com&#x2F;free-photos-vectors&#x2F;car&quot;&gt;freepik&lt;&#x2F;a&gt;
+    &lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;Kubernetes is the 800-pound gorilla of container orchestration.&lt;br &#x2F;&gt;
+It powers some of the biggest microservice deployments worldwide, but it comes
+with a price tag.&lt;&#x2F;p&gt;
+&lt;p&gt;Especially for smaller teams, it can be time-consuming to maintain and has a
+steep learning curve. For what our team of four wanted to achieve at trivago, it
+added too much overhead. So we looked into alternatives ...and fell in love with
+&lt;a href=&quot;https:&#x2F;&#x2F;www.nomadproject.io&#x2F;&quot;&gt;Nomad&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-wishlist&quot;&gt;The wishlist&lt;&#x2F;h2&gt;
+&lt;p&gt;Our team runs a number of typical services for monitoring and performance
+analysis: API endpoints for metrics written in Go, Prometheus exporters, log
+parsers like Logstash or &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;trivago&#x2F;gollum&quot;&gt;Gollum&lt;&#x2F;a&gt;, and databases like InfluxDB or Elasticsearch.
+Each of these services run in their own container. We needed a simple system to
+keep those jobs running.&lt;&#x2F;p&gt;
+&lt;p&gt;We started with a list of requirements for container orchestration:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run a fleet of services across many machines.&lt;&#x2F;li&gt;
+&lt;li&gt;Provide an overview of running services.&lt;&#x2F;li&gt;
+&lt;li&gt;Allow for communication between services.&lt;&#x2F;li&gt;
+&lt;li&gt;Restart them automatically when they die.&lt;&#x2F;li&gt;
+&lt;li&gt;Be manageable by a small team.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;On top of that, the following things were nice to have but not strictly
+required:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tag machines by their capabilities (e.g. label machines with fast disks for
+I&#x2F;O heavy services.)&lt;&#x2F;li&gt;
+&lt;li&gt;Be able to run these services independently of any orchestrator (e.g. in
+development).&lt;&#x2F;li&gt;
+&lt;li&gt;Have a common place to share configurations and secrets.&lt;&#x2F;li&gt;
+&lt;li&gt;Provide an endpoint for metrics and logging.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;why-kubernetes-was-not-a-good-fit-for-us&quot;&gt;Why Kubernetes was not a good fit for us&lt;&#x2F;h2&gt;
+&lt;p&gt;When creating a prototype with Kubernetes, we noticed that we started adding
+ever-more complex layers of logic to operate our services. Logic on which we
+implicitly relied on.&lt;&#x2F;p&gt;
+&lt;p&gt;As an example, Kubernetes allows embedding service configurations using
+&lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;docs&#x2F;tasks&#x2F;configure-pod-container&#x2F;configure-pod-configmap&#x2F;&quot;&gt;ConfigMaps&lt;&#x2F;a&gt;. Especially when merging multiple config files or
+adding more services to a pod, this can get quite confusing quickly.
+Kubernetes - or &lt;a href=&quot;https:&#x2F;&#x2F;helm.sh&#x2F;&quot;&gt;helm&lt;&#x2F;a&gt;, for that matter - allows injecting external configs
+dynamically to ensure separation of concerns. But this can
+lead to tight, implicit coupling between your project and Kubernetes.
+Helm and ConfigMaps are optional features so you don’t have to use them. You
+might as well just copy the config into the Docker image. However, it’s tempting
+to go down that path and build unnecessary abstractions that can later bite you.&lt;&#x2F;p&gt;
+&lt;p&gt;On top of that, the Kubernetes ecosystem is still rapidly evolving. It takes a
+fair amount of time and energy to stay up-to-date with the best practices and
+latest tooling. Kubectl, minikube, kubeadm, helm, tiller, kops, oc - the list
+goes on and on. Not all tools are necessary to get started with Kubernetes, but
+it’s hard to know which ones are, so you have to be at least aware of them.
+Because of that, the learning curve is quite steep.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;when-to-use-kubernetes&quot;&gt;When to use Kubernetes&lt;&#x2F;h2&gt;
+&lt;p&gt;At trivago specifically, many teams use Kubernetes and are quite happy with it.
+These instances are managed by Google or Amazon however, which have the capacity to do so.&lt;&#x2F;p&gt;
+&lt;p&gt;Kubernetes comes with &lt;a href=&quot;https:&#x2F;&#x2F;jvns.ca&#x2F;blog&#x2F;2017&#x2F;08&#x2F;05&#x2F;how-kubernetes-certificates-work&#x2F;&quot;&gt;amazing
+features&lt;&#x2F;a&gt;,
+that make container orchestration at scale more manageable:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fine-grained &lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;docs&#x2F;reference&#x2F;access-authn-authz&#x2F;authorization&#x2F;&quot;&gt;rights management&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;[Custom controllers] allow getting logic into the cluster. These are just
+programs that talk to the Kubernetes API&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;docs&#x2F;tasks&#x2F;run-application&#x2F;horizontal-pod-autoscale&#x2F;&quot;&gt;Autoscaling&lt;&#x2F;a&gt;! Kubernetes can scale your services up and down on demand. It
+uses service metrics to do this without manual intervention.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The question is if you really need all those features. You can&#x27;t rely on these
+abstractions to just work; &lt;a href=&quot;https:&#x2F;&#x2F;jvns.ca&#x2F;blog&#x2F;2017&#x2F;08&#x2F;05&#x2F;how-kubernetes-certificates-work&#x2F;&quot;&gt;you&#x27;ll have to learn what&#x27;s going on under the
+hood&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Especially in our team, which runs most services on-premise (because of its
+close connection to trivago&#x27;s core infrastructure), we didn&#x27;t want to afford
+running our own Kubernetes cluster. We wanted to ship services instead.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;batteries-not-included&quot;&gt;Batteries not included&lt;&#x2F;h2&gt;
+&lt;p&gt;Nomad is the 20% of service orchestration that gets you 80% of the way. All it
+does is manage deployments. It takes care of your rollouts and restarts your
+containers in case of errors; and that&#x27;s about it.&lt;&#x2F;p&gt;
+&lt;p&gt;If you want anything more, you have to bring it yourself.&lt;&#x2F;p&gt;
+&lt;p&gt;The entire point of Nomad is that it does &lt;em&gt;less&lt;&#x2F;em&gt;: it doesn’t include
+fine-grained rights management or &lt;a href=&quot;https:&#x2F;&#x2F;kubernetes.io&#x2F;docs&#x2F;concepts&#x2F;services-networking&#x2F;network-policies&#x2F;&quot;&gt;advanced network policies&lt;&#x2F;a&gt; and that’s by
+design. Those components are provided as enterprise services, by a third-party -
+or not at all.&lt;&#x2F;p&gt;
+&lt;p&gt;I think Nomad hit a sweet-spot between ease of use and expressiveness. It&#x27;s good
+for small, mostly independent services. If you need more control, you&#x27;ll have to
+build it yourself or use a different approach. Nomad is &lt;em&gt;just&lt;&#x2F;em&gt; an orchestrator.&lt;&#x2F;p&gt;
+&lt;p&gt;The best part about Nomad is that it&#x27;s easy to &lt;em&gt;replace&lt;&#x2F;em&gt;. There is little to no
+vendor lock-in because the functionality it provides can easily be integrated
+into any other system that manages services. It just runs as a plain old single
+binary on every machine in your cluster, that&#x27;s it!&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-nomad-ecosystem-of-loosely-coupled-components&quot;&gt;The Nomad ecosystem of loosely coupled components&lt;&#x2F;h2&gt;
+&lt;p&gt;The real power of Nomad lies within its ecosystem. It integrates very well with
+other - completely optional - products like &lt;a href=&quot;https:&#x2F;&#x2F;www.consul.io&#x2F;&quot;&gt;Consul&lt;&#x2F;a&gt; (a key-value store) or
+&lt;a href=&quot;https:&#x2F;&#x2F;www.vaultproject.io&#x2F;&quot;&gt;Vault&lt;&#x2F;a&gt; (for secrets handling). Inside your Nomad file, you can have sections
+for fetching data from those services:&lt;&#x2F;p&gt;
+&lt;pre style=&quot;background-color:#fafafa;&quot;&gt;
+&lt;span style=&quot;color:#f29718;&quot;&gt;template &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;data = &amp;lt;&amp;lt;EOH
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;LOG_LEVEL=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;{{key &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;service&#x2F;geo-api&#x2F;log-verbosity&lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;}}&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;API_KEY=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;{{with secret &amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;secret&#x2F;geo-api-key&lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;}}{{.Data.value}}{{end}}&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;EOH
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;destination = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#86b300;&quot;&gt;&amp;quot;secrets&#x2F;file.env&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;env         = true
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#61676c;&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;This will read the &lt;code&gt;service&#x2F;geo-api&#x2F;log-verbosity&lt;&#x2F;code&gt; key from Consul and expose it
+as a &lt;code&gt;LOG_LEVEL&lt;&#x2F;code&gt; environment variable inside your job. It&#x27;s also exposing
+&lt;code&gt;secret&#x2F;geo-api-key&lt;&#x2F;code&gt; from Vault as &lt;code&gt;API_KEY&lt;&#x2F;code&gt;. Simple, but powerful!&lt;&#x2F;p&gt;
+&lt;p&gt;Because it&#x27;s so simple, Nomad can also be easily extended with other services
+through its API. For example, jobs can be tagged for service discovery. At
+trivago, we tag all services, which expose metrics, with &lt;code&gt;trv-metrics&lt;&#x2F;code&gt;. This
+way, Prometheus finds the services via Consul and periodically scrapes the
+&lt;code&gt;&#x2F;metrics&lt;&#x2F;code&gt; endpoint for new data. The same can be done for logs by integrating
+&lt;a href=&quot;https:&#x2F;&#x2F;grafana.com&#x2F;loki&quot;&gt;Loki&lt;&#x2F;a&gt; for example.&lt;&#x2F;p&gt;
+&lt;p&gt;There are many other examples for extensibility:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trigger a Jenkins job using a webhook and Consul watches to redeploy your
+Nomad job on service config changes.&lt;&#x2F;li&gt;
+&lt;li&gt;Use Ceph to add a distributed file system to Nomad.&lt;&#x2F;li&gt;
+&lt;li&gt;Use &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;fabiolb&#x2F;fabio&quot;&gt;fabio&lt;&#x2F;a&gt; for Load balancing&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;All of this allowed us to grow our infrastructure organically without too much
+up-front commitment.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;fair-warning&quot;&gt;Fair warning&lt;&#x2F;h2&gt;
+&lt;p&gt;No system is perfect. I advise you not to use any fancy new features in
+production right now. There are &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hashicorp&#x2F;nomad&#x2F;issues?q=is%3Aopen+is%3Aissue+label%3Abug&quot;&gt;bugs&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;hashicorp&#x2F;nomad&#x2F;issues&#x2F;698&quot;&gt;missing features&lt;&#x2F;a&gt; of course - but
+&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;kubernetes&#x2F;kubernetes&#x2F;issues?q=is%3Aopen+is%3Aissue+label%3Akind%2Fbug&quot;&gt;that&#x27;s also the case for
+Kubernetes&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;Compared to Kubernetes, there is far less momentum behind Nomad. Kubernetes has
+seen around 75000 commits and 2000 contributors so far, while Nomad sports about
+14000 commits and 300 contributors. It will be hard for Nomad to keep up with
+the velocity of Kubernetes, but maybe it doesn’t have to! The scope is much more
+narrow and the smaller community could also mean that it&#x27;ll be easier to get a
+pull request merged in comparison to Kubernetes.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;&#x2F;h2&gt;
+&lt;p&gt;The takeaway is: don&#x27;t use Kubernetes just because everybody else does.
+Carefully evaluate your requirements and check which tool fits the bill.&lt;&#x2F;p&gt;
+&lt;p&gt;If you&#x27;re planning to deploy a fleet of homogenous services on a large-scale
+infrastructure, Kubernetes might be the way to go. Just be aware of the
+additional complexity and the operational costs. Some of these costs can be
+avoided by using a managed Kubernetes environment like &lt;a href=&quot;https:&#x2F;&#x2F;cloud.google.com&#x2F;kubernetes-engine&#x2F;&quot;&gt;Google Kubernetes
+Engine&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;aws.amazon.com&#x2F;eks&#x2F;&quot;&gt;Amazon EKS&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;If Kubernetes was a car, Nomad would be a scooter.&lt;br &#x2F;&gt;
+Sometimes you prefer one and sometimes the other.
+So the two solutions are not mutually exclusive.&lt;&#x2F;p&gt;
+&lt;p&gt;Just because both can get you from A to B, depending on where you want to go,
+one is more convenient than the other. Both have their right to exist.&lt;&#x2F;p&gt;
+&lt;p&gt;If you&#x27;re just looking for a reliable orchestrator that is easy to maintain and
+extendable, why not give Nomad a try? You might be surprised by how far it&#x27;ll get you.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;credits&quot;&gt;Credits&lt;&#x2F;h2&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;http:&#x2F;&#x2F;jakubsacha.pl&#x2F;&quot;&gt;Jakub Sacha&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;schafele&quot;&gt;Wolfgang Gassler&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;SHyx0rmZ&quot;&gt;Patrick Pokatilo&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;perrymanuk&quot;&gt;Perry
+Manuk&lt;&#x2F;a&gt;, [Inga Feick], &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;m3t0r&quot;&gt;Simon Brüggen&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;arnecls&quot;&gt;Arne Claus&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;esteban-barrios-a60a4717&quot;&gt;Esteban Barrios&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;twitter.com&#x2F;kassybas&quot;&gt;Barnabas Kutassy&lt;&#x2F;a&gt; for reviewing drafts of this article.&lt;&#x2F;p&gt;
+</description>
+            </item>
+        
+    </channel>
+</rss>
