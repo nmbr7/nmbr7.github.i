@@ -1,5 +1,0 @@
-+++
-title = "Hi!"
-path = "about"
-+++
-
