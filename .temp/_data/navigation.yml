@@ -2,3 +2,5 @@
   link: /about.html
 - name: Home
   link: /
+- name: Blog
+  link: /blog

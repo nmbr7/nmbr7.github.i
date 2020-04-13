@@ -25,29 +25,36 @@
   <div class="container">
 
     <main>
-    <div class="body">
-        <header>
-      <div class="bio">
-      {% include "snippets/logo.html" %}
-      <h2>  🅂🅄🄷🄰🄸🄻 🅡➐  </h2>
-      <h5> ᴅᴇsɪɢɴ - ʙᴜɪʟᴅ - ʙʀᴇᴀᴋ - sᴇᴄᴜʀᴇ </h5>
-        <nav>
-          <ul>
-              <li><a href="/blog">Blog</a></li>
-              <li><a href="https://twitter.com/nmbr_7">Twitter</a></li>
-              <li> <a href="https://github.com/nmbr7">Github</a></li>
-              <li><a href="/about">About</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-        </header>
-    
+      {% block content %}
+      {% for page in paginator.pages %}
+      <article class="homepage">
+        <p class='post-meta'>{{ macros::nicedate(daynum=page.day, date=page.date) }}</p>
+        <a href="{{ page.permalink | safe }}">
+          <h1>{{ page.title }}</h1>
+        </a>
+        {% if page.summary %}
+        {{ page.summary | safe | striptags }}
+        {% elif page.extra.excerpt %}
+        {{ page.extra.excerpt | safe | striptags}}
+        {% else %}
+        {{ page.content | safe | striptags| truncate(length=300) }}
+        {% endif %}
+        <a href="{{ page.permalink }}">More »</a>
+      </article>
+      {% endfor %}
+      {% if paginator.previous %}
+      <a class="button" href="{{  paginator.previous}}">« Next articles</a>
+      {% endif %}
+      {% if paginator.next %}
+      <a class="button" href="{{  paginator.next }}">Previous articles »</a>
+      {% endif %}
+      {% endblock content %}
     </main>
   </div>
   {% block teaser %}
-
   {% endblock teaser %}
+  {% include "snippets/footer.html" %}
+  {% include "snippets/analytics.html" %}
 </body>
 
 </html>

@@ -31,12 +31,14 @@ h2 {
 
 html,
 body {
+//  height: 100%;
 }
 
 body {
   font-family: Georgia, Times, serif;
   font-size: 120%;
   line-height: 1.58;
+  border-top: 0.5em solid $forestbiome;
 
 }
 
@@ -44,7 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0px auto;
-  margin-top:70px;
+  margin-top: 70px;
 }
 
 header {
@@ -60,13 +62,13 @@ header {
 
 .bio {
   width: 210px;
-  line-height: 1.58;
   margin: auto;
 }
 
 main {
   padding: 20px;
-  margin: auto;
+  margin-bottom: 50px;
+  max-width: 650px;
 }
 
 main article {
@@ -118,23 +120,7 @@ caption {
 
 .homepage .post-meta {
   font-size: 80%;
-  margin-top: 50px;
 }
-
-.head{
-  background: $lightestsky;
-  width: 100%;
-  height: 5px;
-  background: $forestbiome;
-  text-align:center;
-  }
-
-.head h1{
-color: white;
-  font-family: Georgia, Times, serif;
-  margin: auto ;
-  font-size:150%;
-  }
 
 code {
   background: $light-bg;
@@ -269,35 +255,30 @@ figcaption {
 }
 
 footer {
-  text-align: center;
-  margin: auto ;
-  margin-top: 210px;
+  position: relative;
+  bottom: 0;
+  margin-top: 50px;
   background: $lightestsky;
   color: $stormgray;
   width: 100%;
   height: 200px;
-  }
+}
 
 #teaser .body,
 footer .body {
   max-width: 800px;
-  margin: 0px auto;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+footer nav {
+  // text-align: right;
+  // margin-left: -8em;
+  width: 7em;
+}
 
 footer nav ul {
-  display: inline-block;
-  padding-left: 0px;
-  font-size:70%;
-  padding-top:30px;
-}
-
-footer nav li:not(:first-child):before {
-  content: " · ";
-}
-
-footer nav li {
   list-style: none;
-  display: inline;
+  padding-left: 0;
 }
 
