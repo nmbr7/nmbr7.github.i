@@ -2,18 +2,18 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>nmbr_7</title>
-        <link>http://127.0.0.1:1111</link>
+        <link>https://nmbr7.github.io</link>
         <description>Security Enthusiast interested in System&#x2F;Web security, CTFer, Student</description>
         <generator>Zola</generator>
         <language>en</language>
-        <atom:link href="http://127.0.0.1:1111/rss.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="https://nmbr7.github.io/rss.xml" rel="self" type="application/rss+xml"/>
         <lastBuildDate>Mon, 13 Apr 2020 00:00:00 +0000</lastBuildDate>
         
             <item>
                 <title>ByteBandits CTF 2020</title>
                 <pubDate>Mon, 13 Apr 2020 00:00:00 +0000</pubDate>
-                <link>http://127.0.0.1:1111/2020/bytebanditsctf/</link>
-                <guid>http://127.0.0.1:1111/2020/bytebanditsctf/</guid>
+                <link>https://nmbr7.github.io/2020/bytebanditsctf/</link>
+                <guid>https://nmbr7.github.io/2020/bytebanditsctf/</guid>
                 <description>&lt;p&gt;The challenges were good and really fun to solve, our team &lt;code&gt;7SecCTF&lt;&#x2F;code&gt; managed to solve 6 challenges.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;the-gremlin-challenge-was-particularly-interesting&quot;&gt;The &lt;code&gt;gremlin&lt;&#x2F;code&gt; challenge was particularly interesting&lt;&#x2F;h2&gt;
 &lt;hr &#x2F;&gt;
