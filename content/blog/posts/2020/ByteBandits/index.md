@@ -7,7 +7,7 @@ tag="CTF Writeup"
 +++
 
 The challenges were good and really fun to solve, our team `7SecCTF` managed to solve 6 challenges.
-## The `gremline` challenge was particularly interesting
+## The `gremlin` challenge was particularly interesting
 ---
 It was a `Reverse-Engineering` Challenge.\
 The challenge Description was :
@@ -22,7 +22,7 @@ u32 table[10][2] = { {0xff, 1}, {0xfe, 2}, {0xfd, 3},
 ```
 I downloaded the `cpg.bin` file.
 ```rust
-grimline >> head cpg.bin
+gremlin >> head cpg.bin
 H:2,blockSize:1000,created:17168fe53f5,format:1,fletcher:a504a51d
 H:2,blockSize:1000,created:17168fe53f5,format:1,fletcher:a504a51d
 chunk:1,block:2,len:1,map:2,max:380,next:3,pages:3,root:400000c388,time:3ee,version:1  
@@ -37,7 +37,7 @@ chunk:1,block:2,len:1,map:2,max:380,next:3,pages:3,root:400000c388,time:3ee,vers
 ```
 On running `strings` command on it, the output contained many strings like `LINE_NUMBER` `ORDER` `PARSER_TYPE_NAME` `CODE` and also contained some code segments
 ```c
-grimline >> strings cpg.bin
+gremlin >> strings cpg.bin
 ....
 ....
 ....
@@ -75,7 +75,7 @@ printf("\n")
 ```
 we can also note that all the code segments are preceded by the string `CODE`, so i `grepped` the `strings` output
 ```rust
-grimline >> strings cpg.bin| grep CODE -A1|head -n30
+gremlin >> strings cpg.bin| grep CODE -A1|head -n30
 CODE
 u64 n
 --
