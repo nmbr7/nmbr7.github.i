@@ -147,7 +147,8 @@ key[1]
 sz++
 return sz;
 idx = 0
-in[] = { 0, 3, 9, 1, 1, 4, 5, 2, 7, 6, 1, 5, 0, 6, 3, 9, 8, 4, 9, 9, 2,\n        1, 3, 7, 6, 5, 4, 6, 1, 1, 2, 3, 3, 2, 1, 0, 3, 8, 2, 7 }
+in[] = { 0, 3, 9, 1, 1, 4, 5, 2, 7, 6, 1, 5, 0, 6, 3, 9, 8, 4,
+  9, 9, 2,\n        1, 3, 7, 6, 5, 4, 6, 1, 1, 2, 3, 3, 2, 1, 0, 3, 8, 2, 7 }
 ...
 ...
 ...
@@ -189,7 +190,8 @@ while (idx < n){
 return sz;
 
 idx = 0
-in[] = { 0, 3, 9, 1, 1, 4, 5, 2, 7, 6, 1, 5, 0, 6, 3, 9, 8, 4, 9, 9, 2, 1, 3, 7, 6, 5, 4, 6, 1, 1, 2, 3, 3, 2, 1, 0, 3, 8, 2, 7 }
+in[] = { 0, 3, 9, 1, 1, 4, 5, 2, 7, 6, 1, 5, 0, 6, 3, 9, 8, 4,
+         9, 9, 2, 1, 3, 7, 6, 5, 4, 6, 1, 1, 2, 3, 3, 2, 1, 0, 3, 8, 2, 7 }
 
 len = sizeof(in) / sizeof(u8)
 sz = calc_size(in, len)
@@ -208,7 +210,8 @@ we can also see that an array named `table` is being referred here which appears
 
 i then converted the above c code to python which involved removing some size calculation and memory allocation functions 
 ```python
-table = [ [0xff, 1], [0xfe, 2], [0xfd, 3], [0xfc, 4], [0xfb, 5], [0x00, 5], [0x01, 4], [0x02, 3], [0x03, 2], [0x04, 1] ]
+table = [ [0xff, 1], [0xfe, 2], [0xfd, 3], [0xfc, 4],
+           [0xfb, 5], [0x00, 5], [0x01, 4], [0x02, 3], [0x03, 2], [0x04, 1] ]
 
 def resolve(s,idx):
     key = table[s[0]]
@@ -222,7 +225,8 @@ def resolve(s,idx):
     return (idx,val)
 def main():
     idx = 0
-    ln = [ 0, 3, 9, 1, 1, 4, 5, 2, 7, 6, 1, 5, 0, 6, 3, 9, 8, 4, 9, 9, 2, 1, 3, 7, 6, 5, 4, 6, 1, 1, 2, 3, 3, 2, 1, 0, 3, 8, 2, 7 ]
+    ln = [ 0, 3, 9, 1, 1, 4, 5, 2, 7, 6, 1, 5, 0, 6, 3, 9, 8, 4,
+           9, 9, 2, 1, 3, 7, 6, 5, 4, 6, 1, 1, 2, 3, 3, 2, 1, 0, 3, 8, 2, 7 ]
     l = len(ln)
     idx_o = 0
     out= [0]*l
