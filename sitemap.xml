@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         <url>
-            <loc>https://nmbr7.github.io/</loc>
+            <loc>http://127.0.0.1:1111/</loc>
             
         </url>
     
         <url>
-            <loc>https://nmbr7.github.io/2020/bytebanditsctf/</loc>
+            <loc>http://127.0.0.1:1111/2020/bytebanditsctf/</loc>
             
                 <lastmod>2020-04-13</lastmod>
             
         </url>
     
         <url>
-            <loc>https://nmbr7.github.io/about/</loc>
+            <loc>http://127.0.0.1:1111/about/</loc>
             
         </url>
     
         <url>
-            <loc>https://nmbr7.github.io/blog/</loc>
+            <loc>http://127.0.0.1:1111/blog/</loc>
             
         </url>
     
         <url>
-            <loc>https://nmbr7.github.io/blog/page/1/</loc>
+            <loc>http://127.0.0.1:1111/blog/page/1/</loc>
             
         </url>
     
