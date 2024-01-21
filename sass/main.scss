@@ -15,8 +15,7 @@ $forestbiome: #6DAC4FFF;
 $stormgray: #b0b8b4ff;
 $lightestsky: #e7ebe0ff;
 
-$monospace: operator mono, sfmono-regular, Consolas, liberation mono, Menlo,
-  Courier, monospace;
+$monospace: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 /* Tiny reset */
 
@@ -64,7 +63,8 @@ color: white;
   display: flex;
   flex-direction: column;
   margin: 0px auto;
-  margin-top: 10px;
+  min-height: 80%;
+  margin-top: 45px;
 }
 
 header {
@@ -79,9 +79,11 @@ header {
 }
 
 main {
-  padding: 20px;
-  margin-bottom: 50px;
-  max-width: 650px;
+    min-height: 85%;
+    padding: 20px;
+    padding-bottom: 25%;
+    margin-bottom: 50px;
+    max-width: 650px;
 }
 
 figure a {
@@ -123,7 +125,8 @@ main video {
   .container {
     flex-direction: row;
     justify-content: center;
-    margin-top: 70px;
+    min-height: 80%;
+    margin-top: 45px;
   }
 
   main {
@@ -416,85 +419,20 @@ input:focus::placeholder {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo_font_light {
-    display: none;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background: $blue-500;
-    color: white;
-    border-top: 0.5em solid $pink-500;
-  }
-
-  .bio,
-  .post-meta {
-    color: $grey-300;
-  }
-
-  .post-links {
-    border-top: solid 1px white;
-  }
-
-  a {
-    color: $pink-500;
-    border-bottom: 1px dashed $pink-500;
-  }
-
-  a:hover {
-    border-bottom: 2px solid $pink-500;
-  }
-
-  .icon {
-    filter: brightness(0) invert(1);
-  }
-
-  main img {
-    background-color: white;
-    border-radius: 6px;
-  }
-
-  code {
-    background-color: $grey-500;
-  }
-
-  pre {
-    background-color: #fff;
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-  }
-
-  .info {
-    background: $blue-800;
-    border-color: $grey-400;
-  }
-
-  .autocomplete input,
-  .autocomplete-items div {
-    border: 0;
-    background: $blue-800;
-    color: white;
-  }
-
-  footer {
-    background: $blue-800;
-  }
-}
-
 footer {
   text-align: center;
-  margin: auto ;
-  margin-top: 220px;
   background: $lightestsky;
   color: $stormgray;
   width: 100%;
-  height: 200px;
-  }
+  height: 15%;
+  bottom: 0px;
+  padding-bottom: 20px;
+  min-height: 100px;
+}
 
 #teaser .body,
 footer .body {
+
   max-width: 800px;
   margin: 0px auto;
 }
