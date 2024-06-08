@@ -1,9 +1,9 @@
 +++
-title="ByteBandits CTF 2020"
-date=2020-04-13
-path="2020/bytebanditsctf"
+title="Building a Database from scratch"
+date=2024-05-15
+path="2024/dbfromscratch"
 [extra]
-tag="CTF Writeup"
+tag="System Programming, Database Internals"
 +++
 
 The challenges were good and really fun to solve, our team `7SecCTF` managed to solve 6 challenges.

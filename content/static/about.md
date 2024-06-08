@@ -1,11 +1,9 @@
 +++
-title = "Hi!, I'm Suhail "
+title = "Hey there, I'm Suhail"
 path = "about"
 render = false
 +++
 
-I'm a UnderGrad Student at Cochin University Of Science And Technology.
+I like building stuff. ❤ Open-source, System programming and Linux.
 
-Interested in developing good usable software which are fast and secure. 
-
-Mostly Rust and Python on linux.
+You can find my resume <a href="/resume">here</a>

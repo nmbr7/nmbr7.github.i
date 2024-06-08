@@ -7,15 +7,15 @@ $blue-500: #234;
 $blue-800: #141f2b;
 
 $grey-100: #ddd;
-$grey-200: #fafafa;
+$grey-200: #f2f8f4;
 $grey-300: #b9b9b9;
-$grey-400: #555;
+$grey-400: #555555;
 $grey-500: #111;
-$forestbiome: #6DAC4FFF;
+$forestbiome: #6dac4fff;
 $stormgray: #b0b8b4ff;
 $lightestsky: #e7ebe0ff;
 
-$monospace: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$monospace: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 
 /* Tiny reset */
 
@@ -45,26 +45,191 @@ body {
   line-height: 1.58;
 }
 
-.head{
+.head {
   background: $lightestsky;
   width: 100%;
   height: 5px;
   background: $forestbiome;
-  text-align:center;
+}
+
+.head h1 {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  font-size: 150%;
+}
+
+// Resume page
+.resume_div {
+  display: flex;
+  justify-content: center;
+  .resume {
+    width: 60%;
+  }
+}
+
+// library page
+.library-heading {
+  margin-left: -15px;
+  font-size: x-large;
+  text-decoration: underline;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.library-title {
+  font-size: larger;
+  margin-left: -5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.lib-content{
+margin-bottom: 10px;
+}
+
+.library-subcontent {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  padding-left: 10px;
+  font-size: medium;
+}
+
+.sub-title{
+  font-size: smaller;
+  font-weight: lighter;
+}
+
+// resources page
+
+.res-heading {
+  font-size: x-large;
+  padding-left: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.res_div {
+  margin: 1px;
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 1px;
+
+  .res_content {
+    border-radius: 7px;
+    font-size: medium;
+    text-align: justify;
+    width: 46%;
+    height: 180px;
+    background-color: rgba(230, 230, 230, 0.305);
+    padding: 15px;
+    padding-bottom: 5px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.12),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    margin: 5px;
+
+    .res-title {
+      line-height: 1.2;
+
+      .title {
+        font-weight: 600;
+        font-style: italic;
+        font-size: 90%;
+      }
+
+      .r-date {
+        font-size: small;
+        color: rgba(46, 60, 49, 0.797);
+      }
+    }
+
+    .content {
+      line-height: 1.5;
+      padding: 2px;
+      margin-bottom: 3px;
+      margin-top: 3px;
+      height: 140px;
+      font-size: smaller;
+      display: flex;
+      flex-direction: column;
+      overflow: scroll;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      scrollbar-color: rgba(86, 86, 86, 0.2);
+      scrollbar-width: none;
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+      }
+    }
+  }
+}
+
+.main-row {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 2px;
+  font-size: large;
+}
+
+.r-row {
+  line-height: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  max-width: 600px;
+}
+
+.r-link {
+  border-radius: 5px;
+  font-size: medium;
+  width: 250px;
+  height: 70px;
+  background-color: rgba(246, 194, 194, 0.159);
+  padding: 10px;
+  padding-bottom: 5px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  margin: 5px;
+  padding-top: 15px;
+  padding-left: 10px;
+
+  &:hover {
+    background-color: rgba(246, 194, 194, 0.368);
   }
 
-.head h1{
-color: white;
-  font-family: Georgia, Times, serif;
-  margin: auto ;
-  font-size:150%;
+  .r-name {
+    margin-left: 5px;
+    font-size: large;
   }
+
+  .r-row-sub {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: small;
+    color: rgba(46, 60, 49, 0.797);
+  }
+}
+
+.h-link {
+  margin-left: 5px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   margin: 0px auto;
   min-height: 80%;
-  margin-top: 45px;
+  //margin-top: 45px;
 }
 
 header {
@@ -73,17 +238,14 @@ header {
 }
 
 .bio {
-  width: 210px;
-  margin: auto;
-  padding: 16px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
 }
 
 main {
-    min-height: 85%;
-    padding: 20px;
-    padding-bottom: 25%;
-    margin-bottom: 50px;
-    max-width: 650px;
+  height: 80%;
+  max-width: 80%;
 }
 
 figure a {
@@ -94,13 +256,18 @@ figure a:hover {
   border: none;
 }
 
-nav a,
-nav a:hover {
-  border-bottom: none;
+nav {
+  a:hover {
+    border-bottom: none;
+  }
 }
 
+.r-header {
+  text-align: center;
+}
 main article {
   margin-bottom: 44px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 main img {
@@ -119,6 +286,31 @@ main video {
   body {
     font-size: 110%;
   }
+
+  main {
+    padding: 30px 30px;
+  }
+
+  .res_div {
+    flex-direction: column;
+    padding: 1px;
+
+    .res_content {
+      width: 90%;
+
+      .content {
+        height: 110px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1850px) {
+  .res_div {
+    .res_content {
+      width: 30%;
+    }
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -126,15 +318,14 @@ main video {
     flex-direction: row;
     justify-content: center;
     min-height: 80%;
-    margin-top: 45px;
   }
 
   main {
-    padding: 0px 30px;
+    padding: 30px 30px;
   }
 
   .bio span:after {
-    content: "Writes about Rust, low-level computing, and microwave clocks.";
+    content: "";
   }
 }
 
@@ -168,21 +359,22 @@ caption {
 }
 
 code {
-  background: $grey-200;
-  border-radius: 6px;
+  border-radius: 3px;
   display: inline-block;
-  font-family: $monospace;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: xx-small;
   -moz-font-feature-settings: "liga" off;
   font-feature-settings: "liga" off;
   font-size: 16px;
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: subpixel-antialiased;
-  max-width: 100%;
+  max-width: 90%;
   overflow-x: auto;
-  padding: 0 5px;
+  padding: 0px 10px 0px 10px;
   vertical-align: middle;
   word-wrap: normal;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+  background-color: rgba(229, 246, 230, 0.303);
 }
 
 blockquote {
@@ -196,9 +388,10 @@ pre {
   font-family: $monospace;
   font-size: 16px;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 3px;
   overflow-x: auto;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 0px 1px 0 rgba(0, 0, 0, 0.12);
+  background-color: rgba(246, 214, 214, 0.165);
 }
 
 h1 {
@@ -233,8 +426,6 @@ header nav ul {
   text-align: initial;
   padding-left: 0px;
 }
-
-
 
 header nav li:not(:first-child):before {
   content: " · ";
@@ -292,11 +483,9 @@ figcaption {
   color: $pink-200;
 }
 
-
 #teaser a::after {
   content: "\a0»";
 }
-
 
 .email {
   background-color: white;
@@ -361,7 +550,40 @@ input:focus::placeholder {
 }
 
 // Mobile
+@media screen and (max-width: 1050px) {
+  main {
+    padding: 30px 30px;
+  }
+
+  .res_div {
+    padding: 15px;
+    flex-direction: column;
+    min-width: 300px;
+    gap: 10px;
+
+    .res_content {
+      width: 90%;
+    }
+  }
+}
+
+// Mobile
 @media screen and (max-width: 800px) {
+  main {
+    padding: 30px 30px;
+  }
+
+  .res_div {
+    padding: 15px;
+    flex-direction: column;
+
+    gap: 10px;
+
+    .res_content {
+      width: 90%;
+    }
+  }
+
   #searchbox {
     display: none;
   }
@@ -420,29 +642,27 @@ input:focus::placeholder {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   background: $lightestsky;
   color: $stormgray;
   width: 100%;
-  height: 15%;
-  bottom: 0px;
-  padding-bottom: 20px;
-  min-height: 100px;
+  height: 20%;
+  font-size: larger;
 }
 
 #teaser .body,
 footer .body {
-
-  max-width: 800px;
-  margin: 0px auto;
+  width: 100%;
+  margin-top: -10px;
 }
-
 
 footer nav ul {
   display: inline-block;
   padding-left: 0px;
-  font-size:70%;
-  padding-top:30px;
+  font-size: 70%;
 }
 
 footer nav li:not(:first-child):before {
@@ -453,4 +673,3 @@ footer nav li {
   list-style: none;
   display: inline;
 }
-
