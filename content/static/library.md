@@ -96,7 +96,7 @@ render = false
     <div class='row'>
         <span>A great visualization of how different container types are structure in memory</span>
     </div>
-    <img src='/rust_container_cheatsheet.png' width=90%>
+    <img src='/rust_container_cheatsheet.png' style="max-width:1200px;width:90%">
     </div>
 </div>
 
