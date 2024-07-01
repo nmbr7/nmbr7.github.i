@@ -15,18 +15,24 @@
         <loc>https://nmbr7.github.io/about/</loc>
     </url>
     <url>
-        <loc>https://nmbr7.github.io/blog/</loc>
+        <loc>https://nmbr7.github.io/databases/</loc>
     </url>
     <url>
-        <loc>https://nmbr7.github.io/blog/page/1/</loc>
-    </url>
-    <url>
-        <loc>https://nmbr7.github.io/library/</loc>
+        <loc>https://nmbr7.github.io/languages/</loc>
     </url>
     <url>
         <loc>https://nmbr7.github.io/resources/</loc>
     </url>
     <url>
         <loc>https://nmbr7.github.io/resume/</loc>
+    </url>
+    <url>
+        <loc>https://nmbr7.github.io/security/</loc>
+    </url>
+    <url>
+        <loc>https://nmbr7.github.io/security/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://nmbr7.github.io/software_security/</loc>
     </url>
 </urlset>
