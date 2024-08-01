@@ -33,4 +33,11 @@ render = true
  </div>
 </a>
 
+<a href="/perf">
+ <div class='r-link'>
+    <span class='r-name'>Performance Engineering</span>
+    <div class='r-row-sub'>Performance analysis, related tools, and references.</div>
+ </div>
+</a>
+
 </div>

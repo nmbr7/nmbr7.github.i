@@ -11,41 +11,41 @@ render = true
 </div>
 
 <div class='lib-content'>
-<div class='row'><span>- </span><span>MITRE ATT&CK®</span><a href="https://attack.mitre.org">
+<div class='row'><span>MITRE ATT&CK®</span><a href="https://attack.mitre.org">
 <img src='/Link.svg' width=15px>
 </a>
 </div>
 
 <div class="library-subcontent">
 <div class='row'>
-<span>A knowledge base of adversary tactics and techniques based on real-world observations.</span>
+<span>- A knowledge base of adversary tactics and techniques based on real-world observations.</span>
 </div>
 <div class='row'>
-<span>Provides a collection of useful resource for developing specific threat models and methodologies.</span>
+<span>- Provides a collection of useful resource for developing specific threat models and methodologies.</span>
 </div>
 </div>
 </div>
 
 <div class='lib-content'>
-<div class='row'><span>- </span><span>MITRE D3FENCE</span><a href="https://d3fend.mitre.org/">
+<div class='row'><span>MITRE D3FENCE</span><a href="https://d3fend.mitre.org/">
 <img src='/Link.svg' width=15px>
 </a></div>
 
 <div class="library-subcontent">
 <div class='row'>
-<span>A knowledge graph of cybersecurity countermeasures from development to operations and forward.</span>
+<span>- A knowledge graph of cybersecurity countermeasures from development to operations and forward.</span>
 </div>
 </div>
 </div>
 
 <div class='lib-content'>
-<div class='row'><span>- </span><span>OWASP Top Ten</span><a href="https://owasp.org/www-project-top-ten">
+<div class='row'><span>OWASP Top Ten</span><a href="https://owasp.org/www-project-top-ten">
 <img src='/Link.svg' width=15px>
 </a></div>
 
 <div class="library-subcontent">
 <div class='row'>
-<span>Top 10 Web Application security risks release and updated every year.</span>
+<span>- Top 10 Web Application security risks release and updated every year.</span>
 </div>
 </div>
 </div>

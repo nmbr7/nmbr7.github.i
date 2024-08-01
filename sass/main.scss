@@ -71,7 +71,7 @@ body {
 
 // library page
 .library-heading {
-  margin-left: -15px;
+  margin-left: -20px;
   font-size: x-large;
   text-decoration: underline;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -79,7 +79,8 @@ body {
 
 .library-title {
   font-size: larger;
-  margin-left: -5px;
+  text-decoration: underline;
+  margin-left: -10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -90,7 +91,7 @@ body {
 .library-subcontent {
   display: flex;
   flex-direction: column;
-  line-height: 1.4;
+  line-height: 1.5;
   padding-left: 10px;
   font-size: medium;
 }
