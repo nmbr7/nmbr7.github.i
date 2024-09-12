@@ -69,6 +69,11 @@ body {
   }
 }
 
+.bold-head {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 // library page
 .library-heading {
   margin-left: -20px;
@@ -108,10 +113,10 @@ body {
   padding-left: 10px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
 .res_div {
   margin: 1px;
   display: flex;
-  width: 95%;
   justify-content: center;
   align-self: center;
   align-content: center;
@@ -121,11 +126,12 @@ body {
   padding: 1px;
 
   .res_content {
+    display: block;
     border-radius: 7px;
     font-size: medium;
     text-align: justify;
     width: 46%;
-    height: 180px;
+    height: 220px;
     background-color: rgba(230, 230, 230, 0.305);
     padding: 15px;
     padding-bottom: 5px;
@@ -134,12 +140,12 @@ body {
     margin: 5px;
 
     .res-title {
-      line-height: 1.2;
+      line-height: 1;
 
       .title {
         font-weight: 600;
         font-style: italic;
-        font-size: 90%;
+        color: #000000;
       }
 
       .r-date {
@@ -153,7 +159,7 @@ body {
       padding: 2px;
       margin-bottom: 3px;
       margin-top: 3px;
-      height: 140px;
+      height: 180px;
       font-size: smaller;
       display: flex;
       flex-direction: column;
@@ -162,6 +168,28 @@ body {
       scroll-behavior: smooth;
       scrollbar-color: rgba(86, 86, 86, 0.2);
       scrollbar-width: none;
+      margin-left: 0px;
+      padding-top: 10px;
+
+      /* Works on Firefox */
+      scrollbar-width: thin;
+      scrollbar-color: rgba(38, 72, 39, 0.131) rgba(255, 255, 255, 0);
+      scroll-behavior: smooth;
+
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: rgba(255, 166, 0, 0);
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: rgba(207, 207, 207, 0.3);
+        border-radius: 20px;
+        border: 3px solid rgba(255, 166, 0, 0);
+      }
 
       .row {
         display: flex;
@@ -313,24 +341,15 @@ main video {
     padding: 1px;
 
     .res_content {
-      width: 90%;
-
+      width: 95%;
       .content {
-        height: 110px;
+        height: 160px;
       }
     }
   }
 }
 
-@media screen and (min-width: 1850px) {
-  .res_div {
-    .res_content {
-      width: 30%;
-    }
-  }
-}
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 200px) {
   .container {
     flex-direction: row;
     justify-content: center;
@@ -340,9 +359,48 @@ main video {
   main {
     padding: 30px 30px;
   }
+}
+
+@media screen and (min-width: 1800px) {
+  .res_div {
+    .res_content {
+      // width: 30%; // Ideal width
+      width: 50%;
+      height: 235px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    min-height: 80%;
+
+    .res_div {
+      .res_content {
+        width: 95%;
+        height: 220px;
+      }
+    }
+  }
+
+  main {
+    padding: 30px 30px;
+  }
 
   .bio span:after {
     content: "";
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .res_div {
+    .res_content {
+      // width: 45%; //common  base width
+      width: 50%;
+      height: 225px;
+    }
   }
 }
 
@@ -575,11 +633,11 @@ input:focus::placeholder {
   .res_div {
     padding: 15px;
     flex-direction: column;
-    min-width: 300px;
     gap: 10px;
 
     .res_content {
-      width: 90%;
+      width: 95%;
+      height: 230px;
     }
   }
 }
@@ -593,11 +651,14 @@ input:focus::placeholder {
   .res_div {
     padding: 15px;
     flex-direction: column;
-
     gap: 10px;
 
     .res_content {
-      width: 90%;
+      width: 95%;
+
+      .content {
+        height: 160px;
+      }
     }
   }
 
@@ -689,4 +750,8 @@ footer nav li:not(:first-child):before {
 footer nav li {
   list-style: none;
   display: inline;
+}
+
+.sub-note {
+  font-size: smaller;
 }

@@ -5,14 +5,15 @@ render = true
 +++
 
 <div class='r-row'>
-<!-- 
+
 <a href="/databases">
  <div class='r-link'>
   <span class='r-name'>Database Systems</span>
     <div class='r-row-sub'>DB internals & implementation techniques, research paper summaries and related notes.</div>
  </div>
 </a>
-<a href="/system-level">
+
+<!-- <a href="/system-level">
  <div class='r-link'>
   <span class='r-name'>System Programming Notes</span>
     <div class='r-row-sub'>System programming techniques and related notes and references.</div>
