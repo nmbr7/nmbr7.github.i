@@ -170,6 +170,14 @@ Please go through the papers for a more detailed understanding.&nbspAlso, please
             <span>Contains detailed analysis on different data processing systems and their operational guarantees.</span>
         </div>
     </div>
+     <div class='row'><span>- </span><span>Jack Vanlightly's&nbspWritings</span><a href="https://jack-vanlightly.com">
+    <img src='/Link.svg' width=15px>
+    </a></div>
+    <div class="library-subcontent">
+        <div class='row'>
+            <span>Well-written notes and observations on data processing systems, software design and related practices.</span>
+        </div>
+    </div>
     <div class='row'><span>- </span><span>Build a Simple Database</span><a href="https://cstack.github.io/db_tutorial">
     <img src='/Link.svg' width=15px>
     </a></div>
